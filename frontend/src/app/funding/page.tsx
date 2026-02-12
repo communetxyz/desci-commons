@@ -265,7 +265,7 @@ function ProposalInRound({ roundId, proposalId }: { roundId: number; proposalId:
   if (!proposal) return null;
 
   const [paperId, proposer] = proposal as [bigint, string, string, bigint, bigint];
-  const contributedEth = contributions ? Number(formatEther(contributions)) : 0;
+  const contributedEth = contributions && typeof contributions === 'bigint' ? Number(formatEther(contributions)) : 0;
 
   return (
     <div className="bg-gray-800 p-3 rounded text-sm">

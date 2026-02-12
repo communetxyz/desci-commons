@@ -281,7 +281,7 @@ function ReplicationItem({ replicationId }: { replicationId: number }) {
     <div className="bg-gray-800 p-2 rounded text-xs">
       <div className="flex justify-between items-center mb-1">
         <span>{submitter.slice(0, 6)}...{submitter.slice(-4)}</span>
-        <Badge className={resolved ? (supportPercent > 50 ? "bg-emerald-600" : "bg-red-600") : "bg-yellow-600"} size="sm">
+        <Badge className={resolved ? (supportPercent > 50 ? "bg-emerald-600" : "bg-red-600") : "bg-yellow-600"}>
           {resolved ? (supportPercent > 50 ? "Approved" : "Rejected") : "Voting"}
         </Badge>
       </div>

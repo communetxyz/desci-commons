@@ -283,13 +283,13 @@ function SubmitReviewForm() {
               </div>
             </div>
 
-            {paper && (
+            {paper && Array.isArray(paper) ? (
               <Alert className="bg-gray-800 border-gray-700">
                 <AlertDescription>
-                  <strong>Reviewing Paper #{paperId}:</strong> {(paper as any)[0]}
+                  <strong>Reviewing Paper #{paperId}:</strong> {paper[0]?.toString()}
                 </AlertDescription>
               </Alert>
-            )}
+            ) : null}
             
             <div>
               <label className="text-sm text-gray-400 block mb-2">Review Score: {score[0]}/10</label>
